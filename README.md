@@ -7,4 +7,4 @@
 
 ---
 
-Powered by [Docsify](https://docsify.js.org) · [Cloudflare Pages](https://pages.cloudflare.com) · [zmustudio.site](https://zmustudio.site)
+Powered by [Docsify](https://docsify.js.org) · [zmustudio.site](https://zmustudio.site)
