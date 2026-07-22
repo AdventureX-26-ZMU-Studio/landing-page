@@ -1,4 +1,4 @@
-<div class="cover-logo">🚀</div>
+<div class="cover-logo">ℤ</div>
 
 <span class="cover-badge">AdventureX 2026 · ZMU Studio</span>
 
