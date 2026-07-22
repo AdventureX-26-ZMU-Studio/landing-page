@@ -1,4 +1,6 @@
-<span class="badge">AdventureX 2026 · ZMU Studio</span>
+<div class="cover-logo">🚀</div>
+
+<span class="cover-badge">AdventureX 2026 · ZMU Studio</span>
 
 # Hello, World
 
