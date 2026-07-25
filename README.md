@@ -1,10 +1,20 @@
-# 欢迎来到 ZMU Studio
+# ZMU Studio
 
-> AdventureX 2026 · ZMU Studio
+The source for [zmustudio.site](https://zmustudio.site) — an independent
+three-person studio and AdventureX 2026 team.
 
-这里是 ZMU Studio 的小小起点。  
-更多精彩内容即将上线。
+## Local preview
 
----
+This is a dependency-free static site. Serve the repository root with any local
+HTTP server:
 
-Powered by [Docsify](https://docsify.js.org) · [zmustudio.site](https://zmustudio.site)
+```bash
+python -m http.server 4173
+```
+
+Then open `http://localhost:4173`.
+
+## Deployment
+
+Cloudflare Pages can publish the repository root directly. No build command is
+required.

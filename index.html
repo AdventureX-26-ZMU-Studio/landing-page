@@ -1,94 +1,262 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZMU Studio</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <style>
-    .cover {
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e) !important;
-    }
-    .cover-main {
-      color: #fff !important;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 0.5rem !important;
-    }
-    .cover-main h1 {
-      font-size: 3.5rem !important;
-      font-weight: 800 !important;
-      background: linear-gradient(90deg, #667eea, #a78bfa);
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      background-clip: text !important;
-      margin: 0 !important;
-    }
-    .cover-main p {
-      color: rgba(255,255,255,0.6) !important;
-      font-size: 1.125rem !important;
-      max-width: 480px !important;
-      line-height: 1.8 !important;
-      margin: 0.5rem 0 1.5rem !important;
-    }
-    .cover-main a {
-      display: inline-block;
-      padding: 0.75rem 2rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #fff;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      border: none;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 16px rgba(102,126,234,0.4);
-    }
-    .cover-main a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(102,126,234,0.6);
-    }
-    .cover-logo {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.25rem;
-      font-weight: 800;
-      color: #302b63;
-      box-shadow: 0 8px 32px rgba(102,126,234,0.35);
-      margin-bottom: 0.5rem;
-    }
-    .cover-badge {
-      display: inline-block;
-      padding: 0.375rem 1rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      background: rgba(102,126,234,0.12);
-      color: #a78bfa;
-      border: 1px solid rgba(102,126,234,0.2);
-    }
-    .sidebar-toggle { display: none; }
-  </style>
-</head>
-<body>
-  <div id="app"></div>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script>
-    window.$docsify = {
-      name: 'ZMU Studio',
-      repo: 'https://github.com/AdventureX-26-ZMU-Studio/landing-page',
-      loadSidebar: false,
-      coverpage: true,
-      onlyCover: false,
-      auto2top: true,
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/emoji.min.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="ZMU Studio — 三位创作者组成的独立小组，AdventureX 2026 参赛团队。"
+    >
+    <meta name="theme-color" content="#11110f">
+    <meta property="og:title" content="ZMU Studio — Make the Unknown Tangible">
+    <meta
+      property="og:description"
+      content="Three minds, one frequency. Meet the people behind ZMU Studio."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zmustudio.site/">
+    <title>ZMU Studio — Make the Unknown Tangible</title>
+
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转到主要内容</a>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="ZMU Studio 首页">
+          <span class="brand-mark" aria-hidden="true">Z</span>
+          <span class="brand-name">ZMU STUDIO</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span>MENU</span>
+          <span class="menu-glyph" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="主要导航">
+          <a href="#studio">Studio</a>
+          <a href="#people">People</a>
+          <a href="#adventurex">AdventureX</a>
+          <a
+            class="nav-external"
+            href="https://github.com/AdventureX-26-ZMU-Studio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+          <div class="hero-grid" aria-hidden="true"></div>
+          <div class="hero-orbit" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <span class="orbit orbit-three"></span>
+            <span class="orbit-core">3</span>
+          </div>
+
+          <div class="hero-kicker" data-reveal>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>INDEPENDENT CREATIVE UNIT</span>
+            <span class="hero-location">30.3°N / 120.2°E</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-line" data-reveal>ZMU</span>
+            <span class="hero-line hero-line-outline" data-reveal>STUDIO</span>
+          </h1>
+
+          <div class="hero-bottom">
+            <p class="hero-statement" data-reveal>
+              <span>MAKE THE UNKNOWN</span>
+              <span>TANGIBLE.</span>
+            </p>
+            <div class="hero-intro" data-reveal>
+              <p>
+                三个独立个体，共用一个前进方向。我们在想法刚刚成形时相遇，
+                用代码、设计与实验把它带到现实。
+              </p>
+              <a class="text-link" href="#people">
+                MEET THE THREE <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="signal-strip" aria-label="工作室信息">
+          <div class="signal-track">
+            <span>03 MAKERS</span>
+            <i aria-hidden="true"></i>
+            <span>01 STUDIO</span>
+            <i aria-hidden="true"></i>
+            <span>ADVENTUREX 2026</span>
+            <i aria-hidden="true"></i>
+            <span>BUILD / TEST / SHIP</span>
+            <i aria-hidden="true"></i>
+            <span aria-hidden="true">03 MAKERS</span>
+            <i aria-hidden="true"></i>
+            <span aria-hidden="true">01 STUDIO</span>
+            <i aria-hidden="true"></i>
+            <span aria-hidden="true">ADVENTUREX 2026</span>
+            <i aria-hidden="true"></i>
+            <span aria-hidden="true">BUILD / TEST / SHIP</span>
+            <i aria-hidden="true"></i>
+          </div>
+        </section>
+
+        <section class="studio-section section-pad" id="studio">
+          <div class="section-index" data-reveal>
+            <span>01 / STUDIO</span>
+            <span>共振场</span>
+          </div>
+          <div class="studio-copy">
+            <p class="eyebrow" data-reveal>WHAT HOLDS US TOGETHER</p>
+            <h2 data-reveal>
+              Not the same minds.<br>
+              <em>The same momentum.</em>
+            </h2>
+            <div class="studio-notes" data-reveal>
+              <p>
+                ZMU Studio 不是一间有围墙的办公室。它是三个人之间持续开放的接口：
+                独立思考，快速碰撞，亲手完成。
+              </p>
+              <p>
+                我们相信最好的作品往往始于一个不够完整、但足够让人兴奋的问题。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="people-section section-pad" id="people" aria-labelledby="people-title">
+          <div class="section-index" data-reveal>
+            <span>02 / PEOPLE</span>
+            <span>三个坐标</span>
+          </div>
+
+          <div class="people-heading">
+            <h2 id="people-title" data-reveal>THREE MINDS.<br>ONE FREQUENCY.</h2>
+            <p data-reveal>
+              每个人保有自己的名字、空间与方向；ZMU 是三条轨迹交汇的地方。
+            </p>
+          </div>
+
+          <div class="people-list">
+            <a
+              class="person person-zr"
+              href="https://zongrui.org"
+              target="_blank"
+              rel="noreferrer"
+              data-reveal
+            >
+              <span class="person-no">01</span>
+              <span class="person-avatar" aria-hidden="true">ZR</span>
+              <span class="person-name">ZONGRUICHD</span>
+              <span class="person-site">zongrui.org</span>
+              <span class="person-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="person person-lh"
+              href="https://liangh.ao"
+              target="_blank"
+              rel="noreferrer"
+              data-reveal
+            >
+              <span class="person-no">02</span>
+              <span class="person-avatar" aria-hidden="true">LH</span>
+              <span class="person-name">LIANGHAO</span>
+              <span class="person-site">liangh.ao</span>
+              <span class="person-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="person person-u1"
+              href="https://ilovebirds.homes"
+              target="_blank"
+              rel="noreferrer"
+              data-reveal
+            >
+              <span class="person-no">03</span>
+              <span class="person-avatar" aria-hidden="true">U1</span>
+              <span class="person-name">Unknown01</span>
+              <span class="person-site">ilovebirds.homes</span>
+              <span class="person-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="adventure-section" id="adventurex" aria-labelledby="adventure-title">
+          <div class="adventure-noise" aria-hidden="true"></div>
+          <div class="adventure-meta" data-reveal>
+            <span>ZMU / AX26</span>
+            <span>HACKATHON ORGANIZATION</span>
+          </div>
+
+          <div class="adventure-content">
+            <p class="eyebrow" data-reveal>NOW BUILDING AT</p>
+            <h2 id="adventure-title" data-reveal>
+              ADVENTURE<span>X</span><br>2026
+            </h2>
+            <p class="adventure-copy" data-reveal>
+              这是我们为 AdventureX 2026 黑客松建立的协作空间。
+              代码、实验与比赛进展，都将在这里留下记录。
+            </p>
+            <a
+              class="adventure-link"
+              href="https://github.com/AdventureX-26-ZMU-Studio"
+              target="_blank"
+              rel="noreferrer"
+              data-reveal
+            >
+              <span>OPEN ORGANIZATION</span>
+              <span class="adventure-link-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="adventure-stamp" aria-hidden="true" data-reveal>
+            <span>PARTICIPANT</span>
+            <strong>AX</strong>
+            <span>TWENTY-SIX</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <a class="footer-brand" href="#top">ZMU<sup>©26</sup></a>
+          <p>SMALL TEAM.<br>SERIOUS CURIOSITY.</p>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="current-year">2026</span> ZMU STUDIO</span>
+          <span class="footer-clock">
+            HANGZHOU / <span id="studio-time">UTC+08</span>
+          </span>
+          <a
+            href="https://github.com/AdventureX-26-ZMU-Studio/landing-page"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SOURCE ↗
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
