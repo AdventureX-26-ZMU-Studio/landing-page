@@ -1,7 +1,7 @@
 # ZMU Studio
 
-The source for [zmustudio.site](https://zmustudio.site) — an independent
-three-person studio and AdventureX 2026 team.
+The source for [zmustudio.site](https://zmustudio.site) — a minimal static
+website for a three-person studio and AdventureX 2026 team.
 
 ## Local preview
 
