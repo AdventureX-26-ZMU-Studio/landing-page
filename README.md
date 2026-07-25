@@ -16,5 +16,6 @@ Then open `http://localhost:4173`.
 
 ## Deployment
 
-Cloudflare Pages can publish the repository root directly. No build command is
-required.
+GitHub Pages publishes the `master` branch from the repository root. No build
+command is required. The custom domain is declared in `CNAME`, while Cloudflare
+provides DNS for `zmustudio.site`.
